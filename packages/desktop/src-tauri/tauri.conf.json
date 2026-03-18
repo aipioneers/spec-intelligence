@@ -1,0 +1,39 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicbarker/tauri/dev/tooling/cli/schema.json",
+  "productName": "Spec Intelligence",
+  "version": "0.1.0",
+  "identifier": "com.audius.spec-intelligence",
+  "build": {
+    "beforeDevCommand": "cd ../web && npx next dev --port 3000",
+    "devUrl": "http://localhost:3000",
+    "beforeBuildCommand": "cd ../web && npx next build",
+    "frontendDist": "../../web/.next"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Spec Intelligence",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 900,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

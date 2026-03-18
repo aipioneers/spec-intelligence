@@ -1,0 +1,33 @@
+[package]
+name = "spec-kit-desktop"
+version = "0.1.0"
+description = "Spec-Kit Desktop Application"
+authors = ["Spec-Kit Team"]
+edition = "2021"
+
+[lib]
+name = "spec_kit_desktop_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-shell = "2"
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+notify = { version = "6", features = ["macos_fsevent"] }
+pulldown-cmark = "0.12"
+git2 = "0.19"
+regex = "1"
+chrono = "0.4"
+reqwest = { version = "0.12", features = ["json"] }
+uuid = { version = "1", features = ["v4"] }
+dirs = "5"
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]

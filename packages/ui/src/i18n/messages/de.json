@@ -1,0 +1,123 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Willkommen bei Spec Intelligence",
+    "recentSpecs": "Aktuelle Spezifikationen",
+    "quickActions": "Schnellaktionen",
+    "createSpec": "Neue Spezifikation erstellen",
+    "importSpec": "Spezifikation importieren",
+    "stats": {
+      "totalSpecs": "Gesamt",
+      "inProgress": "In Bearbeitung",
+      "completed": "Abgeschlossen",
+      "needsReview": "Review erforderlich"
+    }
+  },
+  "features": {
+    "title": "Features",
+    "list": "Feature-Liste",
+    "addFeature": "Feature hinzufügen",
+    "editFeature": "Feature bearbeiten",
+    "deleteFeature": "Feature löschen",
+    "status": {
+      "draft": "Entwurf",
+      "inProgress": "In Bearbeitung",
+      "review": "Im Review",
+      "approved": "Genehmigt",
+      "implemented": "Implementiert"
+    },
+    "priority": {
+      "low": "Niedrig",
+      "medium": "Mittel",
+      "high": "Hoch",
+      "critical": "Kritisch"
+    }
+  },
+  "editor": {
+    "title": "Editor",
+    "placeholder": "Beginnen Sie mit dem Schreiben Ihrer Spezifikation...",
+    "save": "Speichern",
+    "preview": "Vorschau",
+    "splitView": "Geteilte Ansicht",
+    "toolbar": {
+      "bold": "Fett",
+      "italic": "Kursiv",
+      "heading": "Überschrift",
+      "link": "Link einfügen",
+      "image": "Bild einfügen",
+      "code": "Codeblock",
+      "list": "Aufzählung",
+      "orderedList": "Nummerierte Liste",
+      "table": "Tabelle einfügen",
+      "taskList": "Aufgabenliste"
+    },
+    "frontmatter": {
+      "title": "Titel",
+      "status": "Status",
+      "author": "Autor",
+      "tags": "Tags"
+    }
+  },
+  "pipeline": {
+    "title": "Pipeline",
+    "board": "Kanban-Board",
+    "columns": {
+      "backlog": "Backlog",
+      "todo": "Zu erledigen",
+      "inProgress": "In Bearbeitung",
+      "review": "Review",
+      "done": "Fertig"
+    },
+    "dragHint": "Ziehen zum Neuordnen",
+    "addCard": "Karte hinzufügen",
+    "filters": "Filter",
+    "groupBy": "Gruppieren nach"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "general": "Allgemein",
+    "appearance": "Erscheinungsbild",
+    "language": "Sprache",
+    "theme": {
+      "title": "Design",
+      "light": "Hell",
+      "dark": "Dunkel",
+      "system": "System"
+    },
+    "account": {
+      "title": "Konto",
+      "profile": "Profil",
+      "signOut": "Abmelden"
+    },
+    "workspace": {
+      "title": "Arbeitsbereich",
+      "name": "Name des Arbeitsbereichs",
+      "members": "Mitglieder",
+      "inviteMembers": "Mitglieder einladen"
+    }
+  },
+  "common": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "sort": "Sortieren",
+    "loading": "Wird geladen...",
+    "error": "Ein Fehler ist aufgetreten",
+    "retry": "Erneut versuchen",
+    "confirm": "Bestätigen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "close": "Schließen",
+    "export": "Exportieren",
+    "import": "Importieren",
+    "duplicate": "Duplizieren",
+    "archive": "Archivieren",
+    "noResults": "Keine Ergebnisse gefunden",
+    "selectAll": "Alle auswählen",
+    "deselectAll": "Alle abwählen"
+  }
+}

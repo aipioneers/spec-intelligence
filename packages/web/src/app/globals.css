@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+    /* Radix Slate Gray scale */
+    --gray-1: #fcfcfd;
+    --gray-2: #f9f9fb;
+    --gray-3: #f0f0f3;
+    --gray-4: #e8e8ec;
+    --gray-5: #e0e1e6;
+    --gray-6: #d9d9e0;
+    --gray-7: #cdced6;
+    --gray-8: #b9bbc6;
+    --gray-9: #8b8d98;
+    --gray-10: #80838d;
+    --gray-11: #60646c;
+    --gray-12: #1c2024;
+
+    /* Radix Indigo accent scale */
+    --accent-1: #fdfdfe;
+    --accent-2: #f7f9ff;
+    --accent-3: #edf2fe;
+    --accent-4: #e1e9ff;
+    --accent-5: #d2deff;
+    --accent-6: #c1d0ff;
+    --accent-7: #abbdf9;
+    --accent-8: #8da4ef;
+    --accent-9: #3e63dd;
+    --accent-10: #3358d4;
+    --accent-11: #3a5bc7;
+    --accent-12: #1f2d5c;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --gray-1: #111113;
+      --gray-2: #18191b;
+      --gray-3: #212225;
+      --gray-4: #272a2d;
+      --gray-5: #2e3135;
+      --gray-6: #363a3f;
+      --gray-7: #43484e;
+      --gray-8: #5a6169;
+      --gray-9: #696e77;
+      --gray-10: #777b84;
+      --gray-11: #b0b4ba;
+      --gray-12: #edeef0;
+
+      --accent-1: #11131f;
+      --accent-2: #141726;
+      --accent-3: #182449;
+      --accent-4: #1d2e62;
+      --accent-5: #253974;
+      --accent-6: #304384;
+      --accent-7: #3a4f97;
+      --accent-8: #435db1;
+      --accent-9: #3e63dd;
+      --accent-10: #5373e7;
+      --accent-11: #849dff;
+      --accent-12: #c2d6ff;
+    }
+  }
+
+  * {
+    border-color: var(--gray-6);
+  }
+
+  body {
+    background-color: var(--gray-1);
+    color: var(--gray-12);
+    font-family: var(--font-sans);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .spec-card {
+    @apply rounded-lg border bg-[var(--gray-2)] p-4 shadow-sm transition-shadow hover:shadow-md;
+    border-color: var(--gray-6);
+  }
+
+  .spec-input {
+    @apply rounded-md border px-3 py-2 text-sm outline-none transition-colors;
+    border-color: var(--gray-7);
+    background-color: var(--gray-1);
+    color: var(--gray-12);
+  }
+
+  .spec-input::placeholder {
+    color: var(--gray-9);
+  }
+
+  .spec-input:focus {
+    border-color: var(--accent-8);
+    box-shadow: 0 0 0 1px var(--accent-8);
+  }
+
+  .spec-button-primary {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white transition-colors;
+    background-color: var(--accent-9);
+  }
+
+  .spec-button-primary:hover {
+    background-color: var(--accent-10);
+  }
+
+  .spec-button-primary:focus-visible {
+    outline: 2px solid var(--accent-8);
+    outline-offset: 2px;
+  }
+
+  .spec-button-secondary {
+    @apply inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm font-medium transition-colors;
+    border-color: var(--gray-7);
+    background-color: var(--gray-3);
+    color: var(--gray-12);
+  }
+
+  .spec-button-secondary:hover {
+    background-color: var(--gray-4);
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: var(--gray-8);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}

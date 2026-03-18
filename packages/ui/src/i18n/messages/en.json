@@ -1,0 +1,123 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to Spec Intelligence",
+    "recentSpecs": "Recent Specifications",
+    "quickActions": "Quick Actions",
+    "createSpec": "Create New Spec",
+    "importSpec": "Import Spec",
+    "stats": {
+      "totalSpecs": "Total Specs",
+      "inProgress": "In Progress",
+      "completed": "Completed",
+      "needsReview": "Needs Review"
+    }
+  },
+  "features": {
+    "title": "Features",
+    "list": "Feature List",
+    "addFeature": "Add Feature",
+    "editFeature": "Edit Feature",
+    "deleteFeature": "Delete Feature",
+    "status": {
+      "draft": "Draft",
+      "inProgress": "In Progress",
+      "review": "In Review",
+      "approved": "Approved",
+      "implemented": "Implemented"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "critical": "Critical"
+    }
+  },
+  "editor": {
+    "title": "Editor",
+    "placeholder": "Start writing your specification...",
+    "save": "Save",
+    "preview": "Preview",
+    "splitView": "Split View",
+    "toolbar": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "heading": "Heading",
+      "link": "Insert Link",
+      "image": "Insert Image",
+      "code": "Code Block",
+      "list": "Bullet List",
+      "orderedList": "Numbered List",
+      "table": "Insert Table",
+      "taskList": "Task List"
+    },
+    "frontmatter": {
+      "title": "Title",
+      "status": "Status",
+      "author": "Author",
+      "tags": "Tags"
+    }
+  },
+  "pipeline": {
+    "title": "Pipeline",
+    "board": "Kanban Board",
+    "columns": {
+      "backlog": "Backlog",
+      "todo": "To Do",
+      "inProgress": "In Progress",
+      "review": "Review",
+      "done": "Done"
+    },
+    "dragHint": "Drag to reorder",
+    "addCard": "Add Card",
+    "filters": "Filters",
+    "groupBy": "Group By"
+  },
+  "settings": {
+    "title": "Settings",
+    "general": "General",
+    "appearance": "Appearance",
+    "language": "Language",
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "account": {
+      "title": "Account",
+      "profile": "Profile",
+      "signOut": "Sign Out"
+    },
+    "workspace": {
+      "title": "Workspace",
+      "name": "Workspace Name",
+      "members": "Members",
+      "inviteMembers": "Invite Members"
+    }
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "export": "Export",
+    "import": "Import",
+    "duplicate": "Duplicate",
+    "archive": "Archive",
+    "noResults": "No results found",
+    "selectAll": "Select All",
+    "deselectAll": "Deselect All"
+  }
+}

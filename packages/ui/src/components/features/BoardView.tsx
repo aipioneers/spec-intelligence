@@ -8,13 +8,21 @@ const STATUS_COLUMNS: { status: FeatureStatus; label: string; color: string }[] 
   { status: 'Complete', label: 'Complete', color: 'bg-green-100 text-green-700' },
 ];
 
+const STATUS_COLOR_MAP: Record<FeatureStatus, string> = Object.fromEntries(
+  STATUS_COLUMNS.map((c) => [c.status, c.color]),
+) as Record<FeatureStatus, string>;
+
+const STATUS_LABEL_MAP: Record<FeatureStatus, string> = Object.fromEntries(
+  STATUS_COLUMNS.map((c) => [c.status, c.label]),
+) as Record<FeatureStatus, string>;
+
 function BoardCard({
   feature,
-  showProject,
+  badge,
   onClick,
 }: {
   feature: Feature;
-  showProject: boolean;
+  badge: 'project' | 'status';
   onClick: () => void;
 }) {
   return (
@@ -24,10 +32,17 @@ function BoardCard({
     >
       <div className="text-sm font-medium text-gray-12">{feature.shortName}</div>
       <div className="mt-0.5 text-xs text-gray-9">{feature.slug}</div>
-      {showProject && feature.projectName && (
+      {badge === 'project' && feature.projectName && (
         <div className="mt-1.5">
           <span className="inline-flex items-center rounded-full bg-accent-3 px-2 py-0.5 text-xs font-medium text-accent-11">
             {feature.projectName}
+          </span>
+        </div>
+      )}
+      {badge === 'status' && (
+        <div className="mt-1.5">
+          <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${STATUS_COLOR_MAP[feature.status] ?? 'bg-gray-100 text-gray-700'}`}>
+            {STATUS_LABEL_MAP[feature.status] ?? feature.status}
           </span>
         </div>
       )}
@@ -62,7 +77,7 @@ export function BoardView({
                   <BoardCard
                     key={`${f.projectId ?? 'default'}-${f.slug}`}
                     feature={f}
-                    showProject={true}
+                    badge="project"
                     onClick={() => onFeatureClick(f)}
                   />
                 ))}
@@ -105,9 +120,9 @@ export function BoardView({
           <div className="flex flex-col gap-2">
             {items.map((f) => (
               <BoardCard
-                key={f.slug}
+                key={`${f.projectId ?? 'default'}-${f.slug}`}
                 feature={f}
-                showProject={false}
+                badge="status"
                 onClick={() => onFeatureClick(f)}
               />
             ))}
